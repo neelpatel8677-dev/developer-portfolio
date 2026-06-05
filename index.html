@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neel - Developer Portfolio</title>
+    <!-- Font Awesome Link for Logos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
         * {
             margin: 0;
@@ -189,15 +192,30 @@
             margin-bottom: 10px;
             font-size: 1.1rem;
             word-break: break-word;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-details i {
+            margin-right: 12px;
+            width: 20px;
+            text-align: center;
+            color: rgb(132, 11, 245);
+            /* Icons color */
+            font-size: 1.2rem;
         }
 
         .contact-details a {
             color: rgb(119, 119, 235);
             text-decoration: none;
+            margin-left: 5px;
+            /* Label aur link ke beech thoda gap */
         }
 
         .contact-details a:hover {
             color: rgb(132, 11, 245);
+            text-decoration: underline;
+            /* Hover karne par link feel aayegi */
         }
 
         .services-list {
@@ -467,8 +485,9 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Me</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+                
             </ul>
         </nav>
     </header>
@@ -491,6 +510,20 @@
                 websites. With
                 experience in HTML, CSS, JavaScript, and various frameworks, I strive to build innovative solutions that
                 meet client needs.</p>
+            <section id="education" class="secondSection">
+                <h1>Education</h1>
+                <p>GTU: Diploma in Computer Engineering</p>
+                <p>College: RMS POLYTECHNIC</p>
+                <P>SEM: 5</P>
+                <p>CPI: 8.35</p>
+                <p>Expected Graduation: 2027</p>
+            </section>
+            <section id="internship" class="secondSection">
+                <h1>Internship</h1>
+                <p>Currently pursuing an internship at Arth Consultancy Service.</p>
+                <p>Learning web development, software development practices, and industry workflows.</p>
+            </section>
+           
         </section>
 
         <section id="services" class="secondSection">
@@ -520,6 +553,18 @@
                     <p>A personal portfolio showcasing my skills and projects.</p>
                     <a href="#" target="_blank">View Project</a>
                 </div>
+                <div class="project">
+                    <h3>Gym Website</h3>
+                    <p>Designed and developed a responsive Gym Fitness Website featuring services, membership plans, and
+                        contact details using HTML, CSS.</p>
+                    <a href="https://gymneelpatel.42web.io/?i=1" target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>Quiz game</h3>
+                    <p>A responsive Quiz Game built with HTML, CSS, and JavaScript, featuring multiple-choice questions,
+                        score tracking, and an interactive user experience.</p>
+                    <a href="https://neelpatel8677-dev.github.io/Quizgame/" target="_blank">View Project</a>
+                </div>
 
 
             </div>
@@ -529,16 +574,26 @@
             <h1>Contact Me</h1>
             <p>If you'd like to get in touch, feel free to reach out!</p>
             <div class="contact-details">
-                <p><strong>Email:</strong> neelnehapatel9050@gmail.com</p>
-                <p><strong>Phone:</strong> 9157824819</p>
-                <p><strong>Instagram:</strong> neelpatel8677 </p>
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> neelnehapatel9050@gmail.com</p>
+                <p><i class="fas fa-phone"></i> <strong>Phone:</strong> 9157824819</p>
 
+                <!-- Instagram Link -->
+                <p>
+                    <i class="fab fa-instagram"></i>
+                    <strong>Instagram:</strong>
+                    <a href="https://instagram.com/neelpatel8677" target="_blank">neelpatel8677</a>
+                </p>
+
+                <!-- Updated LinkedIn Link -->
+                <p>
+                    <i class="fab fa-linkedin"></i>
+                    <strong>Linked in:</strong>
+                    <a href="https://linkedin.com/in/neel-patel" target="_blank">Neel Patel</a>
+                </p>
             </div>
         </section>
 
-
     </main>
-
 
 </body>
 
