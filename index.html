@@ -63,7 +63,11 @@
 
         .nav-links li a:hover {
             color: #a855f7;
-            /* purple accent to match your site */
+        }
+
+        /* ===== CSS ONLY TOGGLE MECHANISM ===== */
+        #menu-toggle {
+            display: none; /* Checkbox ko humesha hidden rakhenge */
         }
 
         /* ===== HAMBURGER (Mobile) ===== */
@@ -85,7 +89,6 @@
 
         /* ===== MOBILE RESPONSIVE ===== */
         @media (max-width: 768px) {
-            /* FIXED: Mobile par bhi row layout rahega taaki logo left aur burger right mein rahe */
             .navbar {
                 flex-direction: row !important; 
                 justify-content: space-between;
@@ -97,7 +100,7 @@
             }
 
             .nav-links {
-                display: none;
+                display: none; /* By default menu hidden rahega */
                 flex-direction: column;
                 gap: 0;
                 position: absolute;
@@ -109,7 +112,8 @@
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
             }
 
-            .nav-links.active {
+            /* MAGIC CSS: Jab checkbox check hoga, tab dropdown menu dikhega */
+            #menu-toggle:checked ~ .nav-links {
                 display: flex;
             }
 
@@ -138,19 +142,15 @@
             justify-content: space-around;
             align-items: center;
             margin: 70px 0;
-
         }
 
         .firstsection>div {
             width: 30%;
-
         }
 
         .leftsection {
             font-size: 250%;
             margin: 70px 0;
-
-
         }
 
         .rightsection img {
@@ -158,14 +158,11 @@
             max-width: 520px;
             margin: 50px auto;
             height: auto;
-            /* avoid forcing a fixed height that can upscale and blur */
             aspect-ratio: 4 / 3;
-            object-fit: cover;
+            object-fit: contain; /* Vector Illustration ke liye contain best hai */
             object-position: center;
             display: block;
             border-radius: 12px;
-
-            /* rendering hint */
             image-rendering: auto;
             -webkit-user-select: none;
             user-select: none;
@@ -183,7 +180,6 @@
             max-width: 80vw;
             margin: auto;
             margin-top: 2%;
-
         }
 
         .secondSection h1 {
@@ -206,19 +202,19 @@
             margin-right: 12px;
             width: 20px;
             text-align: center;
-            color: rgb(132, 11, 245); /* Icons color */
+            color: rgb(132, 11, 245); 
             font-size: 1.2rem;
         }
 
         .contact-details a {
             color: rgb(119, 119, 235);
             text-decoration: none;
-            margin-left: 5px; /* Label aur link ke beech thoda gap */
+            margin-left: 5px; 
         }
 
         .contact-details a:hover {
             color: rgb(132, 11, 245);
-            text-decoration: underline; /* Hover karne par link feel aayegi */
+            text-decoration: underline; 
         }
 
         .services-list {
@@ -274,7 +270,6 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -286,7 +281,6 @@
                 opacity: 0;
                 transform: translateX(-50px);
             }
-
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -298,7 +292,6 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
-
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -340,7 +333,7 @@
             transition: color 0.3s ease;
         }
 
-        /* Responsive Design */
+        /* Responsive Design Extra BREAKPOINTS */
         @media (max-width: 420px) {
             .left {
                 font-size: 1.15rem;
@@ -375,13 +368,9 @@
             nav ul li {
                 margin: 8px 0;
             }
-
-            /* FIXED: Purani formatting delete ki jo layout bigad rahi thi */
         }
 
         @media (max-width: 768px) {
-            /* FIXED: Purani formatting delete ki jo navbar ko stack kar rahi thi */
-
             .firstsection {
                 flex-direction: column;
                 text-align: center;
@@ -401,8 +390,6 @@
                 width: 100%;
                 height: auto;
                 max-width: 360px;
-                object-fit: cover;
-                object-position: center;
                 margin: 20px auto;
             }
 
@@ -464,11 +451,15 @@
     <header>
         <nav class="navbar">
             <div class="nav-logo">Neel's portfolio</div>
-            <div class="hamburger" id="hamburger">
+            
+            <input type="checkbox" id="menu-toggle">
+            
+            <label for="menu-toggle" class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </label>
+            
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -483,21 +474,17 @@
             <div class="leftsection">
                 Hi, My Name Is <span class="purple">Neel</span>
                 <div>and I am a passionate</div>
-                <div><span class="purple">Full Stack Web Developer</span></div>
-
+                <div><span class="purple">full Stack Web Developer</span></div>
             </div>
             <div class="rightsection">
-                <img src="images1.jpg" alt="Developer portrait">
+                <img src="https://img.freepik.com/premium-vector/full-stack-developer-working-computer-vector-illustration-it-professional-web-developer-programmi_103044-1164.jpg" alt="Developer portrait">
             </div>
         </section>
 
         <section id="about" class="secondSection">
             <h1>About Me</h1>
-            <p>I am a passionate Full Stack web developer with a keen interest in creating dynamic and user-friendly
-                websites. With
-                experience in HTML, CSS, JavaScript, and various frameworks, I strive to build innovative solutions that
-                meet client needs.</p>
-                <p>I am now intern from Arth consultancy service.</p>
+            <p>I am a passionate Full Stack web developer with a keen interest in creating dynamic and user-friendly websites. With experience in HTML, CSS, JavaScript, and various frameworks, I strive to build innovative solutions that meet client needs.</p>
+            <p>I am now intern from Arth consultancy service.</p>
         </section>
 
         <section id="services" class="secondSection">
@@ -518,7 +505,6 @@
             </div>
         </section>
 
-
         <section id="projects" class="secondSection">
             <h1>My Projects</h1>
             <div class="projects-list">
@@ -537,8 +523,6 @@
                     <p>A responsive Quiz Game built with HTML, CSS, and JavaScript, featuring multiple-choice questions, score tracking, and an interactive user experience.</p>
                     <a href="https://neelpatel8677-dev.github.io/Quizgame/" target="_blank">View Project</a>
                 </div>
-
-
             </div>
         </section>
 
@@ -562,9 +546,7 @@
                 </p>
             </div>
         </section>
-
     </main>
-
 </body>
 
 </html>
