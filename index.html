@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neel - Developer Portfolio</title>
-    <!-- Font Awesome Link for Logos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    
     <style>
         * {
             margin: 0;
@@ -86,6 +85,13 @@
 
         /* ===== MOBILE RESPONSIVE ===== */
         @media (max-width: 768px) {
+            /* FIXED: Mobile par bhi row layout rahega taaki logo left aur burger right mein rahe */
+            .navbar {
+                flex-direction: row !important; 
+                justify-content: space-between;
+                padding: 15px 20px;
+            }
+
             .hamburger {
                 display: flex;
             }
@@ -200,22 +206,19 @@
             margin-right: 12px;
             width: 20px;
             text-align: center;
-            color: rgb(132, 11, 245);
-            /* Icons color */
+            color: rgb(132, 11, 245); /* Icons color */
             font-size: 1.2rem;
         }
 
         .contact-details a {
             color: rgb(119, 119, 235);
             text-decoration: none;
-            margin-left: 5px;
-            /* Label aur link ke beech thoda gap */
+            margin-left: 5px; /* Label aur link ke beech thoda gap */
         }
 
         .contact-details a:hover {
             color: rgb(132, 11, 245);
-            text-decoration: underline;
-            /* Hover karne par link feel aayegi */
+            text-decoration: underline; /* Hover karne par link feel aayegi */
         }
 
         .services-list {
@@ -373,26 +376,11 @@
                 margin: 8px 0;
             }
 
-            nav {
-                padding: 12px 0;
-            }
+            /* FIXED: Purani formatting delete ki jo layout bigad rahi thi */
         }
 
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                height: auto;
-                padding: 16px 0;
-            }
-
-            nav ul {
-                flex-direction: column;
-                margin-top: 20px;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-            }
+            /* FIXED: Purani formatting delete ki jo navbar ko stack kar rahi thi */
 
             .firstsection {
                 flex-direction: column;
@@ -485,9 +473,8 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact Me</a></li>
-                
+                <li><a href="#projects">Projects</a></li>
             </ul>
         </nav>
     </header>
@@ -496,11 +483,11 @@
             <div class="leftsection">
                 Hi, My Name Is <span class="purple">Neel</span>
                 <div>and I am a passionate</div>
-                <div><span class="purple">full Stack Web Developer</span></div>
+                <div><span class="purple">Full Stack Web Developer</span></div>
 
             </div>
             <div class="rightsection">
-                <img src="images.jpg" alt="Developer portrait">
+                <img src="images1.jpg" alt="Developer portrait">
             </div>
         </section>
 
@@ -510,20 +497,7 @@
                 websites. With
                 experience in HTML, CSS, JavaScript, and various frameworks, I strive to build innovative solutions that
                 meet client needs.</p>
-            <section id="education" class="secondSection">
-                <h1>Education</h1>
-                <p>GTU: Diploma in Computer Engineering</p>
-                <p>College: RMS POLYTECHNIC</p>
-                <P>SEM: 5</P>
-                <p>CPI: 8.35</p>
-                <p>Expected Graduation: 2027</p>
-            </section>
-            <section id="internship" class="secondSection">
-                <h1>Internship</h1>
-                <p>Currently pursuing an internship at Arth Consultancy Service.</p>
-                <p>Learning web development, software development practices, and industry workflows.</p>
-            </section>
-           
+                <p>I am now intern from Arth consultancy service.</p>
         </section>
 
         <section id="services" class="secondSection">
@@ -553,16 +527,14 @@
                     <p>A personal portfolio showcasing my skills and projects.</p>
                     <a href="#" target="_blank">View Project</a>
                 </div>
-                <div class="project">
+                 <div class="project">
                     <h3>Gym Website</h3>
-                    <p>Designed and developed a responsive Gym Fitness Website featuring services, membership plans, and
-                        contact details using HTML, CSS.</p>
+                    <p>Designed and developed a responsive Gym Fitness Website featuring services, membership plans, and contact details using HTML, CSS.</p>
                     <a href="https://gymneelpatel.42web.io/?i=1" target="_blank">View Project</a>
                 </div>
                 <div class="project">
                     <h3>Quiz game</h3>
-                    <p>A responsive Quiz Game built with HTML, CSS, and JavaScript, featuring multiple-choice questions,
-                        score tracking, and an interactive user experience.</p>
+                    <p>A responsive Quiz Game built with HTML, CSS, and JavaScript, featuring multiple-choice questions, score tracking, and an interactive user experience.</p>
                     <a href="https://neelpatel8677-dev.github.io/Quizgame/" target="_blank">View Project</a>
                 </div>
 
@@ -576,19 +548,17 @@
             <div class="contact-details">
                 <p><i class="fas fa-envelope"></i> <strong>Email:</strong> neelnehapatel9050@gmail.com</p>
                 <p><i class="fas fa-phone"></i> <strong>Phone:</strong> 9157824819</p>
-
-                <!-- Instagram Link -->
+                
                 <p>
-                    <i class="fab fa-instagram"></i>
-                    <strong>Instagram:</strong>
+                    <i class="fab fa-instagram"></i> 
+                    <strong>Instagram:</strong> 
                     <a href="https://instagram.com/neelpatel8677" target="_blank">neelpatel8677</a>
                 </p>
-
-                <!-- Updated LinkedIn Link -->
+                
                 <p>
-                    <i class="fab fa-linkedin"></i>
-                    <strong>Linked in:</strong>
-                    <a href="https://linkedin.com/in/neel-patel" target="_blank">Neel Patel</a>
+                    <i class="fab fa-linkedin"></i> 
+                    <strong>Linked in:</strong> 
+                    <a href="https://www.linkedin.com/in/neel-patel-74839139a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">Neel Patel</a>
                 </p>
             </div>
         </section>
