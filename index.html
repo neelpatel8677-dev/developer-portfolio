@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neel - Developer Portfolio</title>
+    <!-- Font Awesome Link for Logos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
@@ -65,17 +66,16 @@
             color: #a855f7;
         }
 
-        /* ===== CSS ONLY TOGGLE MECHANISM ===== */
-        #menu-toggle {
-            display: none; /* Checkbox ko humesha hidden rakhenge */
-        }
-
-        /* ===== HAMBURGER (Mobile) ===== */
+        /* ===== HAMBURGER BUTTON ===== */
         .hamburger {
             display: none;
             flex-direction: column;
             gap: 5px;
             cursor: pointer;
+            background: none;
+            border: none;
+            outline: none;
+            padding: 5px;
         }
 
         .hamburger span {
@@ -100,7 +100,7 @@
             }
 
             .nav-links {
-                display: none; /* By default menu hidden rahega */
+                display: none; /* Default me menu hidden rahega */
                 flex-direction: column;
                 gap: 0;
                 position: absolute;
@@ -112,9 +112,10 @@
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
             }
 
-            /* MAGIC CSS: Jab checkbox check hoga, tab dropdown menu dikhega */
-            #menu-toggle:checked ~ .nav-links {
-                display: flex;
+            /* NEW METHOD: Jab burger button par click/focus hoga ya menu ke andar click hoga, tab list open rahegi */
+            .navbar:focus-within .nav-links,
+            .nav-links:hover {
+                display: flex !important;
             }
 
             .nav-links li a {
@@ -159,7 +160,7 @@
             margin: 50px auto;
             height: auto;
             aspect-ratio: 4 / 3;
-            object-fit: contain; /* Vector Illustration ke liye contain best hai */
+            object-fit: contain;
             object-position: center;
             display: block;
             border-radius: 12px;
@@ -333,7 +334,7 @@
             transition: color 0.3s ease;
         }
 
-        /* Responsive Design Extra BREAKPOINTS */
+        /* Responsive Design */
         @media (max-width: 420px) {
             .left {
                 font-size: 1.15rem;
@@ -452,13 +453,12 @@
         <nav class="navbar">
             <div class="nav-logo">Neel's portfolio</div>
             
-            <input type="checkbox" id="menu-toggle">
-            
-            <label for="menu-toggle" class="hamburger">
+            <!-- BUTTON WITH tabindex FOR BROWSER FOCUS SELECTION -->
+            <button class="hamburger" id="hamburger" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
-            </label>
+            </button>
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
@@ -533,12 +533,14 @@
                 <p><i class="fas fa-envelope"></i> <strong>Email:</strong> neelnehapatel9050@gmail.com</p>
                 <p><i class="fas fa-phone"></i> <strong>Phone:</strong> 9157824819</p>
                 
+                <!-- Instagram Link -->
                 <p>
                     <i class="fab fa-instagram"></i> 
                     <strong>Instagram:</strong> 
                     <a href="https://instagram.com/neelpatel8677" target="_blank">neelpatel8677</a>
                 </p>
                 
+                <!-- Updated LinkedIn Link -->
                 <p>
                     <i class="fab fa-linkedin"></i> 
                     <strong>Linked in:</strong> 
